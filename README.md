@@ -4,11 +4,7 @@ Statistical approach to Machine learning models
 - /dataset: .csv and .gsheet files (for data discovery)
 
 
-## Data Discovery
 
-![wage](correlation-of-age-and-wage.png)
-![income lineer](correlation-of-education-and-income_lineer.png)
-![income nonlineer](correlation-of-education-and-income_non-lineer.png)
 
 #### Notes
 
