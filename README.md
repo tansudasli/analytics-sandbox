@@ -8,3 +8,5 @@ Statistical approach to Machine learning models
 
 
 
+Note
+- [ ] tag:0.1-statsmodels.api, covers statsmodels.api implementations
