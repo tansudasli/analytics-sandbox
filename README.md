@@ -8,7 +8,7 @@ Statistical approach to Machine learning models
 
 
 
-Note
+### Note
 - tags
     - 1.0-scikit-learn, contains only winning models of scikit-learn versions. It represents change from _statistical approach_ to **ML-approach**
     - 0.2-scikit-learn, contains scikit-learn versions
