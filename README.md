@@ -10,6 +10,6 @@ Statistical approach to Machine learning models
 
 Note
 - tags
-    - 0.1-statsmodels.api, (before scikit-learn) covers statsmodels.api implementations w/ detailed explanations
+    - 1.0-scikit-learn, contains only winning models of scikit-learn versions. It represents change from _statistical approach_ to **ML-approach**
     - 0.2-scikit-learn, contains scikit-learn versions
-    - 1.0-scikit-learn, contains only winning models of scikit-learn versions
+    - 0.1-statsmodels.api, (before scikit-learn) covers statsmodels.api implementations w/ detailed explanations
