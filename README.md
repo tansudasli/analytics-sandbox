@@ -17,3 +17,6 @@ Statistical approach to Machine learning models
 - about _models_
     - GPA and real_estate data are already cleaned. and test/train split is not applied.
     - car_sales data has all ML steps.
+- about large datasets > 100mb on github (only need to send files to github, not to clone)
+   - lfs install `git lfs install`,
+   - lfs activated `git lfs track "cast.csv"`
