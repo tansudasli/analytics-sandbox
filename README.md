@@ -5,7 +5,7 @@ Statistical approach to Machine learning models
 - /dataset: .csv files
 - /probability: probability exercises
 - /statistics: statistic exercises
-- /pandas: pandas exercises on IMDB Data set
+- /pandas: pandas on IMDB Data set
 
 
 
