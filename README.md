@@ -3,7 +3,7 @@
 Statistical approach to Machine learning models
 
 
-## about models
+## models
 
 - GPA and real_estate data are pre-cleaned, and test/train split is not applied.
 - car_sales_lineer_regression covers all ML steps
