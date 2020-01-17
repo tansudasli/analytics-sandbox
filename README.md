@@ -10,7 +10,7 @@ Statistical approach to Machine learning models
 - advertising_EDA uses precleaned **click dataset**.
 - real_estate_of_nyc is **very massy**! dataset. 
    - real_estate_of_nyc_EDA, covers explatory data analysis
-   _ real_estate_of_nyc_lineer_regression, sale_price _prediction_
+   - real_estate_of_nyc_lineer_regression, sale_price _prediction_
    - real_estate_of_nyc_knn, to _set empty_ neighborhoods 
 
 ### structure
