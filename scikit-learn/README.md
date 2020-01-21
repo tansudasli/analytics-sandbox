@@ -2,7 +2,9 @@
 
 Enhancing _Sebastian Raschka_ [codes](https://www.youtube.com/watch?v=9fOWryQq9J8) at PyData Chicago 2016 
 
-## Tuning Attempts
+## Tuning Attempts 
+
+### for linearregression
 
 - brain-weight vs head-size -> r-squared: %64
     - \+ dummy( gender_2) -> r-squared: %64
