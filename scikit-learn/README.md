@@ -7,8 +7,8 @@ Enhancing _Sebastian Raschka_ [codes](https://www.youtube.com/watch?v=9fOWryQq9J
 - brain-weight vs head-size -> r-squared: %64
     - \+ dummy( gender_2) -> r-squared: %64
     - \+ outlier elimination (< 0.99 quantile) -> r-squared: %71 (predictive power increased!)
-    - \+ outlier elimination (< 0.95 quantile) -> r-squared: %65 (predictive power increased!)
-- log_brain-weight vs log_head-size -> r-squared: %65
+    - \+ outlier elimination (< 0.95 quantile) -> r-squared: %65
+- log_brain-weight vs log_head-size -> r-squared: %65 (not added significant impact)
     - \+ dummy( gender_2) -> r-squared: %65, dummy variables
     - \+ dummy( gender_2, age-group_2) -> r-squared: %65, dummy variables
         - \+ outlier elimination (< 0.99 quantile) -> r-squared: %62
