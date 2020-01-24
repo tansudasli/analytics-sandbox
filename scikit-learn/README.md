@@ -1,6 +1,6 @@
 # scikit-learn at PyData Chicago 2016 
 
-Enhancing _Sebastian Raschka_ [codes](https://www.youtube.com/watch?v=9fOWryQq9J8) at PyData Chicago 2016 
+Enhancing _Sebastian Raschka's_ [codes](https://www.youtube.com/watch?v=9fOWryQq9J8) at PyData Chicago 2016, and enhancing Jake Vanderplas's [codes](https://www.youtube.com/watch?v=L7R4HUQ-eQ0) at PyData Chicago 2015
 
 ## Tuning Attempts 
 
