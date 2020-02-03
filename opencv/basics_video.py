@@ -30,9 +30,18 @@ while capture.isOpened():
         # Display the grayscale frame:
         cv2.imshow('Grayscale input camera', gray_frame)
  
+        frame_index = 0
+        if cv2.waitKey(20) & 0xFF == ord('s'):
+            cv2.imwrite(f"camera_frame_{frame_index}.png", frame)
+            frame_index += 1
+
         # Press q on keyboard to exit the program
         if cv2.waitKey(20) & 0xFF == ord('q'):
             break
+        
+
+
+
     # Break the loop
     else:
         break
