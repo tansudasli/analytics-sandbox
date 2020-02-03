@@ -16,6 +16,12 @@ print(f"FPS of capture {fps}")
 if capture.isOpened() == False:
     print("Error opening the camera")
 
+out = cv2.VideoWriter('out.avi', \
+                      cv2.VideoWriter_fourcc('X', 'V', 'I', 'D'), \
+                      int(fps), \
+                      (int(frame_width), int(frame_height)), \
+                      True)
+
 while capture.isOpened():
     # Capture frame-by-frame from the camera
     ret, frame = capture.read()
@@ -44,13 +50,6 @@ while capture.isOpened():
             frame_index += 1
         elif key == ord('r'):    # record as video
             print('recording...')
-            fourcc = cv2.VideoWriter_fourcc('X', 'V', 'I', 'D')
-            isColorful = True
-            out = cv2.VideoWriter('out.avi', \
-                                 fourcc, \
-                                 int(fps), \
-                                 (int(frame_width), int(frame_height)), \
-                                 isColorful)
             out.write(frame)
     # Break the loop
     else:
@@ -59,4 +58,5 @@ while capture.isOpened():
 
 # close sources
 capture.release()
+out.release()
 cv2.destroyAllWindows()
