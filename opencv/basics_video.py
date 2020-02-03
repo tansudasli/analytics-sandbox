@@ -10,8 +10,7 @@ frame_width = capture.get(cv2.CAP_PROP_FRAME_WIDTH)
 frame_height = capture.get(cv2.CAP_PROP_FRAME_HEIGHT)
 fps = capture.get(cv2.CAP_PROP_FPS)
 
-print(f"FPS of capture {FPS}")
-
+print(f"FPS of capture {fps}")
 
 # Check if camera opened successfully
 if capture.isOpened() == False:
@@ -27,26 +26,32 @@ while capture.isOpened():
         # Display the captured frame:
         cv2.imshow('Input frame from the camera', frame)
 
-        # Convert the frame captured from the camera to grayscale: 
-        gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
-        # Display the grayscale frame:
-        cv2.imshow('Grayscale input camera', gray_frame)
- 
         frame_index = 0
-        if cv2.waitKey(20) & 0xFF == ord('s'):
-            cv2.imwrite(f"camera_frame_{frame_index}.png", frame)
-            frame_index += 1
-
-        # Press q on keyboard to exit the program
-        if cv2.waitKey(20) & 0xFF == ord('q'):
-            break
 
         processing_end = time.time()
         FPS = 1 / (processing_end - processing_start)
+      
+        # menu
+        key = cv2.waitKey(20) & 0xFF
 
-        print(f"FPS {FPS}")
-
+        if key == ord('q'):       # quit
+            break
+        elif key == ord('i'):    # info
+            print(f"FPS {FPS}")
+        elif key == ord('s'):    # save as image
+            print('saving...')
+            cv2.imwrite(f"camera_frame_{frame_index}.png", frame)
+            frame_index += 1
+        elif key == ord('r'):    # record as video
+            print('recording...')
+            fourcc = cv2.VideoWriter_fourcc('X', 'V', 'I', 'D')
+            isColorful = True
+            out = cv2.VideoWriter('out.avi', \
+                                 fourcc, \
+                                 int(fps), \
+                                 (int(frame_width), int(frame_height)), \
+                                 isColorful)
+            out.write(frame)
     # Break the loop
     else:
         break
