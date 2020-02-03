@@ -1,5 +1,6 @@
 import cv2
-import numpy as np 
+import numpy as np
+import time
 
 # requires camera access approval!
 
@@ -9,7 +10,7 @@ frame_width = capture.get(cv2.CAP_PROP_FRAME_WIDTH)
 frame_height = capture.get(cv2.CAP_PROP_FRAME_HEIGHT)
 fps = capture.get(cv2.CAP_PROP_FPS)
 
-print(fps)
+print(f"FPS of capture {FPS}")
 
 
 # Check if camera opened successfully
@@ -21,6 +22,8 @@ while capture.isOpened():
     ret, frame = capture.read()
 
     if ret:
+        processing_start = time.time()
+
         # Display the captured frame:
         cv2.imshow('Input frame from the camera', frame)
 
@@ -38,9 +41,11 @@ while capture.isOpened():
         # Press q on keyboard to exit the program
         if cv2.waitKey(20) & 0xFF == ord('q'):
             break
-        
 
+        processing_end = time.time()
+        FPS = 1 / (processing_end - processing_start)
 
+        print(f"FPS {FPS}")
 
     # Break the loop
     else:
