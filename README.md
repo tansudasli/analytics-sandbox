@@ -15,7 +15,7 @@ Machine learning models w/ scikit-learn
 
 ### structure
 
-- /: *ML* real ML scenarios
+- /: **ML** on real scenarios
 - /dataset: .csv files
 - /probability: core probability exercises
 - /statistics: core statistic exercises
