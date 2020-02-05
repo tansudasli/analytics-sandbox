@@ -6,11 +6,25 @@ import time
 
 capture = cv2.VideoCapture(0) #0-1st camera
 
-frame_width = capture.get(cv2.CAP_PROP_FRAME_WIDTH)
-frame_height = capture.get(cv2.CAP_PROP_FRAME_HEIGHT)
-fps = capture.get(cv2.CAP_PROP_FPS)
+# get some parameter values of active camera
+def decodeFourcc(fourcc):
+    return "".join([chr((int(fourcc) >> 8 * i) & 0xFF) for i in range(4)])
 
-print(f"FPS of capture {fps}")
+def getCameraInfo():
+    frame_width = capture.get(cv2.CAP_PROP_FRAME_WIDTH)
+    frame_height = capture.get(cv2.CAP_PROP_FRAME_HEIGHT)
+    fps = capture.get(cv2.CAP_PROP_FPS)
+    fourcc = capture.get(cv2.CAP_PROP_FOURCC)
+    buffsize = capture.get(cv2.CAP_PROP_BUFFERSIZE)
+
+    print(f"fourcc {fourcc}")  
+    print(f"FPS of capture {fps}")
+    print(f"Buffer size {buffsize}")
+
+    return (frame_width, frame_height, fps)
+
+
+frame_width, frame_height, fps = getCameraInfo()
 
 # Check if camera opened successfully
 if capture.isOpened() == False:
