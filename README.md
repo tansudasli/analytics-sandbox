@@ -1,6 +1,6 @@
 # analytics-sandbox
 
-Statistical approach to Machine learning models
+Machine learning models w/ scikit-learn
 
 
 ## models
@@ -15,7 +15,11 @@ Statistical approach to Machine learning models
 
 ### structure
 
+- /: *ML* real ML scenarios
 - /dataset: .csv files
-- /probability: probability exercises
-- /statistics: statistic exercises
-- /pandas: pandas exercises on IMDB Data set
+- /probability: core probability exercises
+- /statistics: core statistic exercises
+- /pandas: core pandas concepts, intersection b/w pandas and numpy
+- /opencv: core image and video concepts w/ opencv
+- /numpy: core _image concepts_ in matplotlib and numpy
+- /scikit-learn: core _ML_ concepts w/ scikit-learn
